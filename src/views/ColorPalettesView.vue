@@ -3,11 +3,51 @@ import { ref } from "vue";
 import ColorPalette from "../components/colors/ColorPalette.vue";
 
 const primaryPalette = ref({
-  rgb500: "#1098F7",
-  rgb400: "#0059D0",
-  rgb300: "#007BE2",
-  rgb200: "#0098DC",
-  rgb100: "#00B0C6",
+  rgb500: "#19072c",
+  rgb400: "#4a1485",
+  rgb300: "#7b22dd",
+  rgb200: "#b07aeb",
+  rgb100: "#e5d3f8",
+});
+
+const secondaryPalette = ref({
+  rgb500: "#330011",
+  rgb400: "#990033",
+  rgb300: "#ff0055",
+  rgb200: "#ff6699",
+  rgb100: "#ffccdd",
+});
+
+const successPalette = ref({
+  rgb500: "#0b1028",
+  rgb400: "#213178",
+  rgb300: "#3651c9",
+  rgb200: "#8797de",
+  rgb100: "#d7dcf4",
+});
+
+const informationPalette = ref({
+  rgb500: "#156d78",
+  rgb400: "#1e99a9",
+  rgb300: "#26c5d9",
+  rgb200: "#56d2e1",
+  rgb100: "#86dfea",
+});
+
+const errorPalette = ref({
+  rgb500: "#b8360e",
+  rgb400: "#ed4612",
+  rgb300: "#f16f47",
+  rgb200: "#f5987b",
+  rgb100: "#f9c1b0",
+});
+
+const warningPalette = ref({
+  rgb500: "#fbda04",
+  rgb400: "#fce132",
+  rgb300: "#fce75f",
+  rgb200: "#fdee8d",
+  rgb100: "#fef5bb",
 });
 </script>
 
@@ -15,11 +55,11 @@ const primaryPalette = ref({
   <div class="color-palette">
     <h1>Color Palettes</h1>
     <ColorPalette name="Primary" :palette="primaryPalette" />
-    <ColorPalette name="Seconary" :palette="primaryPalette" />
-    <ColorPalette name="Success" :palette="primaryPalette" />
-    <ColorPalette name="Information" :palette="primaryPalette" />
-    <ColorPalette name="Error" :palette="primaryPalette" />
-    <ColorPalette name="Warning" :palette="primaryPalette" />
+    <ColorPalette name="Seconary" :palette="secondaryPalette" />
+    <ColorPalette name="Success" :palette="successPalette" />
+    <ColorPalette name="Information" :palette="informationPalette" />
+    <ColorPalette name="Error" :palette="errorPalette" />
+    <ColorPalette name="Warning" :palette="warningPalette" fontColor="black" />
   </div>
 </template>
 

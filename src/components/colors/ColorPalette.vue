@@ -8,6 +8,7 @@ defineProps<{
     rgb400: string;
     rgb500: string;
   };
+  fontColor?: string;
 }>();
 </script>
 
@@ -15,19 +16,44 @@ defineProps<{
   <div class="container">
     <h3 class="green">{{ name }}</h3>
     <section class="palette">
-      <div :style="{ 'background-color': palette.rgb500 }">
+      <div
+        :style="{
+          'background-color': palette.rgb500,
+          color: fontColor || 'white',
+        }"
+      >
         {{ palette.rgb500 }}
       </div>
-      <div :style="{ 'background-color': palette.rgb400 }">
+      <div
+        :style="{
+          'background-color': palette.rgb400,
+          color: fontColor || 'white',
+        }"
+      >
         {{ palette.rgb400 }}
       </div>
-      <div :style="{ 'background-color': palette.rgb300 }">
+      <div
+        :style="{
+          'background-color': palette.rgb300,
+          color: fontColor || 'white',
+        }"
+      >
         {{ palette.rgb300 }}
       </div>
-      <div :style="{ 'background-color': palette.rgb200 }">
+      <div
+        :style="{
+          'background-color': palette.rgb200,
+          color: fontColor || 'white',
+        }"
+      >
         {{ palette.rgb200 }}
       </div>
-      <div :style="{ 'background-color': palette.rgb100 }">
+      <div
+        :style="{
+          'background-color': palette.rgb100,
+          color: fontColor || 'white',
+        }"
+      >
         {{ palette.rgb100 }}
       </div>
     </section>
