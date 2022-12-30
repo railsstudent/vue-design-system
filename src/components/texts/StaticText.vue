@@ -1,25 +1,18 @@
 <script setup lang="ts">
 defineProps<{
   text: string;
-  styleProps: Record<string, any>;
   textStyleProps: Record<string, any>;
 }>();
 </script>
 
 <template>
   <section class="message">
-    <div :style="styleProps">
-      <p :style="textStyleProps">{{ text }}</p>
-    </div>
+    <p :style="textStyleProps">{{ text }}</p>
   </section>
 </template>
 
 <style lang="scss" scoped>
-section.message {
-  padding: 0.5rem 1rem;
-
-  div {
-    flex-grow: 1;
-  }
+section {
+  padding: 0.5rem;
 }
 </style>
