@@ -7,10 +7,10 @@ import { RouterLink, RouterView } from "vue-router";
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/color-palettes">Color Palettes</RouterLink>
         <RouterLink to="/buttons">Buttons</RouterLink>
         <RouterLink to="/inverted-buttons">Inverted Buttons</RouterLink>
+        <RouterLink to="/messages">Messages</RouterLink>
       </nav>
     </div>
   </header>
