@@ -10,6 +10,11 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: "/texts",
+      name: "texts",
+      component: () => import("../views/TextView.vue"),
+    },
+    {
       path: "/color-palettes",
       name: "color palettes",
       component: () => import("../views/ColorPalettesView.vue"),

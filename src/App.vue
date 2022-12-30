@@ -7,6 +7,7 @@ import { RouterLink, RouterView } from "vue-router";
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/texts">Texts</RouterLink>
         <RouterLink to="/color-palettes">Color Palettes</RouterLink>
         <RouterLink to="/buttons">Buttons</RouterLink>
         <RouterLink to="/inverted-buttons">Inverted Buttons</RouterLink>
@@ -51,7 +52,7 @@ nav a {
   border-left: 1px solid var(--color-border);
   text-align: center;
 
-  --num-columns: 5;
+  --num-columns: 6;
   flex-basis: calc(100% / var(--num-columns));
 }
 
