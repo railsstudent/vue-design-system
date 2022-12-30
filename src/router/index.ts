@@ -18,12 +18,19 @@ const router = createRouter({
       component: () => import("../views/AboutView.vue"),
     },
     {
-      path: "/color",
-      name: "color",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      path: "/color-palettes",
+      name: "color palettes",
       component: () => import("../views/ColorPalettesView.vue"),
+    },
+    {
+      path: "/buttons",
+      name: "buttons",
+      component: () => import("../views/ButtonsView.vue"),
+    },
+    {
+      path: "/inverted-buttons",
+      name: "inverted buttons",
+      component: () => import("../views/InvertedButtonsView.vue"),
     },
   ],
 });

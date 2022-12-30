@@ -54,21 +54,33 @@ const warningPalette = ref({
 <template>
   <div class="color-palette">
     <h1>Color Palettes</h1>
-    <ColorPalette name="Primary" :palette="primaryPalette" />
-    <ColorPalette name="Seconary" :palette="secondaryPalette" />
-    <ColorPalette name="Success" :palette="successPalette" />
-    <ColorPalette name="Information" :palette="informationPalette" />
-    <ColorPalette name="Error" :palette="errorPalette" />
-    <ColorPalette name="Warning" :palette="warningPalette" fontColor="black" />
+    <ColorPalette description="Primary" :palette="primaryPalette" />
+    <ColorPalette description="Seconary" :palette="secondaryPalette" />
+    <ColorPalette description="Success" :palette="successPalette" />
+    <ColorPalette description="Information" :palette="informationPalette" />
+    <ColorPalette description="Error" :palette="errorPalette" />
+    <ColorPalette
+      description="Warning"
+      :palette="warningPalette"
+      fontColor="black"
+    />
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+.color-palette {
+  min-height: 70vh;
+}
+
 @media (min-width: 1024px) {
-  .color-palatte {
-    min-height: 100vh;
+  .color-palette {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+
+    > * {
+      flex-basis: 100%;
+    }
   }
 }
 </style>

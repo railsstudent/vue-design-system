@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  name: string;
+  description: string;
   palette: {
     rgb100: string;
     rgb200: string;
@@ -14,7 +14,7 @@ defineProps<{
 
 <template>
   <div class="container">
-    <h3 class="green">{{ name }}</h3>
+    <h3 class="green">{{ description }}</h3>
     <section class="palette">
       <div
         :style="{
@@ -62,7 +62,6 @@ defineProps<{
 
 <style scoped>
 div.container {
-  margin-top: 2rem;
   display: flex;
 }
 
@@ -85,5 +84,12 @@ section.palette > div {
   align-items: center;
   border: 1px solid black;
   color: white;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  section.palette > div {
+    margin-bottom: 1rem;
+  }
 }
 </style>
